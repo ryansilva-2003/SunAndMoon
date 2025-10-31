@@ -8,8 +8,24 @@ header, main {
     background: url("./imagens/ceu.jpg");
 }
 
+.light-theme button{
+    background-color: transparent;
+}
+
+.light-theme #iconsun{
+    transform: scale(0.8);
+    background-color: rgb(93, 173, 238);
+}
+
+.light-theme #iconmoon:hover{
+    transform: scale(1.1);
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+
 h1 {
     color: white;
+    font-size: 40px;
 }
 
 .btn {
@@ -19,17 +35,48 @@ h1 {
 }
 
 button{
-    width: 100px;
-    height: 25px;
+    width: 200px;
+    height: 50px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: transform 0.9s ease;
 }
 
 .dark-theme {
     background: url("./imagens/noite.jfif");
+}
+
+.dark-theme #icon{
+    margin-top: 50px;
+}
+
+
+.dark-theme .btn{
+    margin-top: 98px;
+}
+
+.dark-theme button {
+    background-color: transparent;
+}
+
+.dark-theme #iconsun{
+    border-color: white;
     color: white;
+    transform: scale(1.1);
+}
+
+.dark-theme #iconsun:hover{
+    background-color: rgb(93, 173, 238);
+}
+
+.dark-theme #iconmoon{
+    border-color: white;
+    color: white;
+    transform: scale(0.8);
+    background-color: rgb(37, 37, 37);
 }
 
 .universe-theme {
     background: url("./imagens/universe.jpg");
-    color: white;
 }
 
