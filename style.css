@@ -1,0 +1,16 @@
+header, body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+button{
+    width: 100px;
+    height: 25px;
+}
