@@ -1,3 +1,12 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-359deg);
+  }
+}
+
 header, main {
     display: flex;
     flex-direction: column;
@@ -6,6 +15,17 @@ header, main {
 
 .light-theme{
     background: url("./imagens/ceu.jpg");
+}
+
+.light-theme #icon{
+    animation: spin 35s linear infinite;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.light-theme #icon:hover{
+    filter: drop-shadow(0 0 100px rgba(231, 115, 6, 0.7));
 }
 
 .light-theme button{
@@ -40,6 +60,7 @@ button{
     font-size: 1.2rem;
     border-radius: 50px;
     transition: transform 0.9s ease;
+    cursor: pointer;
 }
 
 .dark-theme {
@@ -47,12 +68,18 @@ button{
 }
 
 .dark-theme #icon{
+    animation: spin 100s linear infinite;
     margin-top: 50px;
+    cursor: pointer;
+    border-radius: 50px;
 }
 
+.dark-theme #icon:hover{
+    filter: drop-shadow(0 0 30px white);
+}
 
 .dark-theme .btn{
-    margin-top: 98px;
+    margin-top: 105px;
 }
 
 .dark-theme button {
@@ -76,7 +103,31 @@ button{
     background-color: rgb(37, 37, 37);
 }
 
+p{
+    font-size: 0.6em;
+    margin-top: 65px;
+    color: white;
+}
+
+.light-theme p {
+    color: black;
+}
+
 .universe-theme {
-    background: url("./imagens/universe.jpg");
+    background: url("./imagens/universe.png") no-repeat;
+}
+
+.universe-theme #icon {
+    width: 1100px;
+    height: 650px;
+    margin-top: 5px 0;
+    border-radius: 50%;
+    cursor: pointer;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 100px rgb(59, 21, 228));
+}
+
+.universe-theme #icon:hover{
+    filter: drop-shadow(0 0 100px white);
 }
 
