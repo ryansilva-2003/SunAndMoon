@@ -3,7 +3,7 @@
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(-359deg);
+    transform: rotate(-360deg);
   }
 }
 
@@ -11,6 +11,10 @@ header, main {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+body{
+    transition: background 2s ease;
 }
 
 .light-theme{
@@ -71,7 +75,7 @@ button{
     animation: spin 100s linear infinite;
     margin-top: 50px;
     cursor: pointer;
-    border-radius: 50px;
+    border-radius: 50%;
 }
 
 .dark-theme #icon:hover{
@@ -120,7 +124,7 @@ p{
 .universe-theme #icon {
     width: 1100px;
     height: 650px;
-    margin-top: 5px 0;
+    margin: 5px 0;
     border-radius: 50%;
     cursor: pointer;
     border-radius: 50%;
@@ -131,3 +135,15 @@ p{
     filter: drop-shadow(0 0 100px white);
 }
 
+.terra-theme {
+    background: url('./imagens/terra.jpg') no-repeat;
+}
+
+.planet-theme {
+    background: url('./imagens/planet.png') no-repeat;
+}
+
+.planet-theme #iconmars{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
