@@ -49,7 +49,7 @@ function earth () {
 
 iconearth.addEventListener('click', earth);
 
-satelite.addEventListener('dblclick', () =>{
+satelite.addEventListener('click', () =>{
         if (document.body.classList.contains('terra-theme')){
         alien.removeAttribute('hidden');
         }
