@@ -7,6 +7,15 @@
   }
 }
 
+@keyframes up {
+    from {
+        transform: translateY(-300px);
+    }
+    to{
+        transform: translateY(100px);
+    }
+}
+
 header, main {
     display: flex;
     flex-direction: column;
@@ -32,18 +41,21 @@ body{
     filter: drop-shadow(0 0 100px rgba(231, 115, 6, 0.7));
 }
 
-.light-theme button{
-    background-color: transparent;
-}
-
 .light-theme #iconsun{
     transform: scale(0.8);
-    background-color: rgb(93, 173, 238);
+    background: linear-gradient(45deg, #FF4500, #FFD700);
+    color: white;
 }
 
 .light-theme #iconmoon:hover{
     transform: scale(1.1);
-    background-color: rgb(37, 37, 37);
+    background: linear-gradient(90deg, #1E1E2F, #3A3A5A);
+    color: white;
+}
+
+.light-theme #iconearth:hover{
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #2E8B57, #1E90FF);
     color: white;
 }
 
@@ -65,10 +77,12 @@ button{
     border-radius: 50px;
     transition: transform 0.9s ease;
     cursor: pointer;
+    background-color: transparent;
+    margin-bottom: 10px;
 }
 
 .dark-theme {
-    background: url("./imagens/noite.jfif");
+    background: url("./imagens/terra.jfif");
 }
 
 .dark-theme #icon{
@@ -79,46 +93,42 @@ button{
 }
 
 .dark-theme #icon:hover{
-    filter: drop-shadow(0 0 30px white);
+    filter: drop-shadow(0 0 50px white);
 }
 
 .dark-theme .btn{
     margin-top: 105px;
 }
 
-.dark-theme button {
-    background-color: transparent;
-}
-
 .dark-theme #iconsun{
     border-color: white;
     color: white;
-    transform: scale(1.1);
 }
 
 .dark-theme #iconsun:hover{
-    background-color: rgb(93, 173, 238);
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #FF4500, #FFD700);;
 }
 
 .dark-theme #iconmoon{
     border-color: white;
     color: white;
     transform: scale(0.8);
-    background-color: rgb(37, 37, 37);
+    background: linear-gradient(90deg, #1E1E2F, #3A3A5A);;
 }
 
-p{
-    font-size: 0.6em;
-    margin-top: 65px;
+.dark-theme #iconearth{
+    border-color: white;
     color: white;
 }
 
-.light-theme p {
-    color: black;
+.dark-theme #iconearth:hover{
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #2E8B57, #1E90FF);;
 }
 
 .universe-theme {
-    background: url("./imagens/universe.png") no-repeat;
+    background-color: black;
 }
 
 .universe-theme #icon {
@@ -128,22 +138,110 @@ p{
     border-radius: 50%;
     cursor: pointer;
     border-radius: 50%;
-    filter: drop-shadow(0 0 100px rgb(59, 21, 228));
+    filter: drop-shadow(0 0 100px black);
 }
 
 .universe-theme #icon:hover{
-    filter: drop-shadow(0 0 100px white);
+    filter: drop-shadow(0 0 100px rgb(59, 21, 228));
+}
+
+.universe-theme #iconsun{
+    color: white;
+    border-color: white;
+}
+
+.universe-theme #iconsun:hover{
+    transform: scale(0.8);
+    background: linear-gradient(45deg, #FF4500, #FFD700);
+}
+
+.universe-theme #iconmoon{
+    color:white;
+    border-color: white;
+}
+
+.universe-theme #iconmoon:hover{
+    transform: scale(0.8);
+    background: linear-gradient(90deg, #1E1E2F, #3A3A5A);
+}
+
+.universe-theme #iconearth{
+    color: white;
+    border-color: white;
+}
+
+.universe-theme #iconearth:hover{
+    transform: scale(0.8);
+    background: linear-gradient(45deg, #2E8B57, #1E90FF);
 }
 
 .terra-theme {
-    background: url('./imagens/terra.jpg') no-repeat;
+    background: url('./imagens/noite.jpg') no-repeat;
 }
 
-.planet-theme {
-    background: url('./imagens/planet.png') no-repeat;
+.terra-theme #icon{
+    cursor: pointer;
+    border-radius: 50%;
+    animation: spin 300s linear infinite;
 }
 
-.planet-theme #iconmars{
-    margin-top: 50px;
-    margin-bottom: 50px;
+.terra-theme #icon:hover{
+    filter: drop-shadow(0 0 100px #137be2);
 }
+
+.terra-theme .btn{
+    margin-top: 40px;
+}
+
+.terra-theme #iconearth {
+    transform: scale(0.8);
+    background: linear-gradient(45deg, #2E8B57, #1E90FF);
+    color: white;
+}
+
+.terra-theme #iconsun{
+    color: white;
+    border-color: white;
+}
+
+.terra-theme #iconmoon{
+    color: white;
+    border-color: white;
+}
+
+.terra-theme #iconsun:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #FF4500, #FFD700);
+}
+
+.terra-theme #iconmoon:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #1E1E2F, #3A3A5A);
+    color: white;
+}
+
+.satelite {
+    position: absolute;
+    top: 500px;
+    left: 400px;
+    width: 50px;
+    animation: up 25s infinite alternate;
+    cursor: pointer;
+}
+
+.alien {
+  position: absolute;
+  top: 60px;
+  width: 100px;
+  animation: slide-left 5s linear forwards;
+}
+
+@keyframes slide-left {
+  from {
+    right: -100px;
+  }
+  to {
+    right: 100%;
+  }
+}
+

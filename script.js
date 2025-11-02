@@ -2,32 +2,32 @@ const iconsun = document.getElementById ('iconsun');
 const iconmoon = document.getElementById ('iconmoon');
 const icon = document.getElementById ('icon');
 const planetView = document.getElementById('planetView');
-
+const satelite = document.getElementById ('satelite');
 const iconearth = document.getElementById ('iconearth');
-const iconmars = document.getElementById ('iconmars');
-const iconneptune = document.getElementById ('iconneptune');
-const iconvenus = document.getElementById ('iconvenus');
-const iconmercury = document.getElementById ('iconmercury');
-const iconsaturn = document.getElementById ('iconsaturn');
-const iconuranus = document.getElementById ('iconuranus');
-const iconjupiter = document.getElementById ('iconjupiter');
+const alien = document.getElementById ('alien');
 
 function sun () {
         icon.src = './imagens/sun.png';
-        document.body.classList.remove('dark-theme', 'universe-theme', 'planet-theme', 'terra-theme');
+        document.body.classList.remove('dark-theme', 'universe-theme', 'terra-theme');
         document.body.classList.add('light-theme');
+
+        satelite.hidden = true;
 }
 
 function moon () {
         icon.src = './imagens/moon.png';
-        document.body.classList.remove('light-theme', 'universe-theme', 'planet-theme', 'terra-theme');
+        document.body.classList.remove('light-theme', 'universe-theme', 'terra-theme');
         document.body.classList.add('dark-theme');
+
+        satelite.hidden = true;
 }
 
 function galaxy () {
         icon.src = './imagens/galaxy.png';
-        document.body.classList.remove('light-theme', 'dark-theme', 'planet-theme', 'terra-theme');
+        document.body.classList.remove('light-theme', 'dark-theme', 'terra-theme');
         document.body.classList.add('universe-theme');
+
+        satelite.hidden = true;
 }
 
 iconsun.addEventListener( 'click', sun );
@@ -41,57 +41,16 @@ icon.addEventListener('click', () => {
 
 function earth () {
         icon.src = './imagens/earth.png';
-        document.body.classList.remove('light-theme', 'universe-theme', 'dark-theme', 'planet-theme');
+        document.body.classList.remove('light-theme', 'universe-theme', 'dark-theme');
         document.body.classList.add('terra-theme');
-}
 
-function mars () {
-        icon.src = './imagens/mars.png';
-        document.body.classList.remove('light-theme', 'universe-theme', 'dark-theme', 'terra-theme');
-        document.body.classList.add('planet-theme');
-}
-
-function neptune () {
-        icon.src = './imagens/aa';
-        document.body.classList.remove('light-theme', 'universe-theme', 'dark-theme');
-        document.body.classList.add('planet-theme');
-}
-
-function venus () {
-        icon.src = './imagens/aa';
-        document.body.classList.remove('light-theme', 'universe-theme', 'dark-theme');
-        document.body.classList.add('planet-theme');
-}
-
-function mercury () {
-        icon.src = './imagens/aa';
-        document.body.classList.remove('light-theme', 'universe-theme', 'dark-theme');
-        document.body.classList.add('planet-theme');
-}
-
-function saturn () {
-        icon.src = './imagens/aa';
-        document.body.classList.remove('light-theme', 'universe-theme', 'dark-theme');
-        document.body.classList.add('planet-theme');
-}
-
-function uranus () {
-        icon.src = './imagens/aa';
-        document.body.classList.remove('light-theme', 'universe-theme', 'dark-theme');
-        document.body.classList.add('planet-theme');
-}
-
-function jupiter () {
-        icon.src = './imagens/jupiter.png';
-        document.body.classList.remove('light-theme', 'universe-theme', 'dark-theme');
-        document.body.classList.add('planet-theme');
+        satelite.hidden = false;
 }
 
 iconearth.addEventListener('click', earth);
-iconmars.addEventListener('click', mars);
-iconneptune.addEventListener('click', neptune);
-iconvenus.addEventListener('click', venus);
-iconmercury.addEventListener('click', mercury);
-iconsaturn.addEventListener('click', saturn);
-iconuranus.addEventListener('click', uranus);
-iconjupiter.addEventListener('click', jupiter);
+
+satelite.addEventListener('dblclick', () =>{
+        if (document.body.classList.contains('terra-theme')){
+        alien.removeAttribute('hidden');
+        }
+})
